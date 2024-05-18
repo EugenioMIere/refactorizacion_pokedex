@@ -36,7 +36,7 @@ class AdminController
 
     private function nombreCompleto(){
         if (isset($_GET['nombre'])){
-            return true;
+            return $_GET['nombre'];
         } return false;
     }
     private function informacionCompleta(){
