@@ -1,6 +1,6 @@
 <?php
 
-namespace controller;
+//namespace controller;
 
 class PublicController
 { // Controlador para el usuario NO logueado.
@@ -14,7 +14,7 @@ class PublicController
     }
 
     public function home(){
-        $pokemones = $this->model->getAll();
+        $pokemones = $this->model->getPokemons();
         $this->presenter->render("view/home.mustache", ["pokemones" => $pokemones]);
     } /* en la vista: {{#pokemones}}
                        <tr>
@@ -22,4 +22,4 @@ class PublicController
                        <td> {{nombre}} </td> ....
            {{/pokemones}}
            */
-}
+    }

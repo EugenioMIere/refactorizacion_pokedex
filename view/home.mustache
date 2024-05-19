@@ -1,0 +1,21 @@
+<!-- The Public Section -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Pokemon</h2>
+    <table class="w3-table w3-striped w3-border">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Imagen</th>
+        </tr>
+        {{#pokemones}}
+            <tr>
+                <td>{{numero_identificador}}</td>
+                <td>{{nombre}}</td>
+                <td>{{tipo}}</td>
+                <td "><img src="{{imagen}}" alt="" width="100em" height="100em"></td>
+
+            </tr>
+        {{/pokemones}}
+    </table>
+</div>

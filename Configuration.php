@@ -1,8 +1,13 @@
 <?php
 
-use controller\AdminController;
-use controller\PublicController;
-use model\PokemonModel;
+//use controller\AdminController;
+//use controller\PublicController;
+//use model\PokemonModel;
+
+include_once ("controller/AdminController.php");
+include_once ("controller/PublicController.php");
+
+include_once ("model/PokemonModel.php");
 
 include_once ("helper/Database.php");
 include_once ("helper/Router.php");
@@ -30,16 +35,17 @@ class Configuration
     // HELPERS
 
     public static function getDatabase(){
+
         $config = self::getConfig();
-        return new Database($config["host"], $config["username"], $config["password"], $config["database"]);
+        return new Database($config["servername"], $config["username"], $config["password"], $config["database"]);
     }
     private static function getConfig(){
-        return parse_ini_file("/config/config.ini");
+        return parse_ini_file("config/config.ini");
     }
 
     public static function getRouter()
     {
-        return new Router("getPublicController", "getAll" );
+        return new Router("getPublicController", "home" );
     }
 
     private static function getPresenter()

@@ -1,6 +1,6 @@
 <?php
 
-namespace model;
+//namespace model;
 
 class PokemonModel
 {
@@ -10,7 +10,7 @@ class PokemonModel
     {
         $this->database = $database;
     }
-    public function getAll(){
+    public function getPokemons(){
         // Obtener pokemon de la BDD
         return $this->database->query("SELECT * FROM pokemon");
     }

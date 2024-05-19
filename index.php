@@ -1,5 +1,4 @@
 <?php
-
 include_once ("Configuration.php");
 $router = Configuration::getRouter();
 
