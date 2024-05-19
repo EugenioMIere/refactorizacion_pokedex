@@ -8,30 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
     <div class="w3-display-container w3-green" style="height:100px;">
 
         <div class="w3-display-topleft">
-            <img src="imagenes/Pokedex.png" alt="">
+            <img src="/public/imagen/Pokedex.png" alt="" width="100em" height="100em">
         </div>
-        <div class="centro">
+
+        <div class="w3-display-middle">
             <h1>Pokedex</h1>
         </div>
+
+
+
         <div class="w3-display-topright">
 
-            <?php
-            // Iniciamos o reanudamos la sesión
-            if (session_status() == PHP_SESSION_NONE) {
-                session_start();
-            }
 
-            // Verificamos si se ha iniciado sesión
-            if (isset($_SESSION['user'])) {
-                // Si se ha iniciado sesión, mostramos el nombre del usuario
-                $user = $_SESSION['user'];
-                echo "Usuario: " . $user;
-            } else {
-                // Si no se ha iniciado sesión, mostramos el formulario de inicio de sesión
-                ?>
             <form action="validar_session.php" method="post">
                 <label for="user"></label>
                 <input type="text" id="user" name="user" required placeholder="Usuario">
@@ -40,20 +32,18 @@
                 <input type="password" id="password" name="password" required placeholder="Clave">
                 <button type="submit">Ingresar</button>
             </form>
-            <?php
-            }
-            ?>
         </div>
 
+    </div>
 
+    <div class="w3-display-container w3-green" style="height:100px;">
         <div class="w3-display-middle">
             <form action="buscar_pokemon.php" method="post">
                 <label for="search"></label>
-                <input type="search" id="search" name="search" required placeholder="Ingrese el nombre, tipo o número de Pokémon">
+                <input type="search" id="search" name="search" placeholder="Ingrese el nombre, tipo o número de Pokémon" width="100px">
                 <button type="submit">¿Quién es este Pokémon?</button>
             </form>
         </div>
-        </div>
+    </div>
 
 </body>
-</html>
