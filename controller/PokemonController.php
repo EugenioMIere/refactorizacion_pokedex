@@ -20,5 +20,15 @@ class PokemonController
         $this->presenter->render("view/pokemonView.mustache", ["pokemon" => $pokemon]);
     }
 
+    public function buscarPokemon(){
+        $pokemonBuscado = $this->model->filter($this->obtenerPokemonBuscado());
+        $this->presenter->render("view/pokemonView.mustache", ["pokemon" => $pokemonBuscado]);
+    }
+    private function obtenerPokemonBuscado(){
+        if (isset($_POST['search'])){
+            return $_POST['search'];
+        }
+    }
+
 
 }

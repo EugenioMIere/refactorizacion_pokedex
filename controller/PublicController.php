@@ -16,12 +16,8 @@ class PublicController
     public function home(){
         $pokemones = $this->model->getPokemons();
         $this->presenter->render("view/home.mustache", ["pokemones" => $pokemones]);
-    } /* en la vista: {{#pokemones}}
-                       <tr>
-                       <td> {{id}} </td>
-                       <td> {{nombre}} </td> ....
-           {{/pokemones}}
-           */
+    }
+
 
 
 }
