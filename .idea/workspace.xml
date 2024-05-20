@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3e9dd9-fef4-4375-a418-ce59758f5d63" name="Changes" comment="">
+    <list default="true" id="4c3e9dd9-fef4-4375-a418-ce59758f5d63" name="Changes" comment="Footer, modificacion del PokemonController -filtrar-">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/PokemonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/PokemonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/PublicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/PublicController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/PokemonModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/PokemonModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/pokemonView.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/pokemonView.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/template/footer.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/template/footer.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/template/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/template/header.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +59,24 @@
       <option name="presentableId" value="Default" />
       <updated>1716222487258</updated>
       <workItem from="1716222488980" duration="999000" />
-      <workItem from="1716223585085" duration="1097000" />
+      <workItem from="1716223585085" duration="2679000" />
     </task>
+    <task id="LOCAL-00001" summary="Footer, modificacion del PokemonController -filtrar-">
+      <option name="closed" value="true" />
+      <created>1716224896205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716224896205</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Footer, modificacion del PokemonController -filtrar-" />
+    <option name="LAST_COMMIT_MESSAGE" value="Footer, modificacion del PokemonController -filtrar-" />
   </component>
 </project>

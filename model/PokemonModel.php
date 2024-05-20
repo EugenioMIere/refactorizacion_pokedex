@@ -49,4 +49,11 @@ class PokemonModel
          $sql = "SELECT * from pokemon WHERE nombre = '$buscado'";
          return $this->database->query($sql);
      }
+
+     public function getAllTipos(){
+    // codigo para retornar los tipos de pokemon y mostrarlos en un select
+         $sql = "SELECT DISTINCT tipo FROM pokemon";
+         $resultado = $this->database->query($sql);
+         return  mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+     }
 }

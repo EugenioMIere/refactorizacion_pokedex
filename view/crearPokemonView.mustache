@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Agregar Pokémon </title>
+</head>
+<body>
+<h1> Nuevo Pokémon </h1>
+<form action="/controller/PublicController.php?controller=pokemon&action=crearPokemon" method="post">
+    <label for="numero">Número:</label>
+    <input type="number" id="numero" name="numero"> <br>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"> <br>
+    <label for="tipo">Tipo:</label>
+    <input type="select" id="tipo" name="tipo"><br>
+    {{#tipos}}
+        <option value="{{tipo}}">
+            {{tipo}}
+        </option>
+    {{/tipos}}
+    <label for="tipo">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion"><br>
+    <label for="imagen">Imágen:</label>
+    <input type="file" id="imagen" name="imagen"> <br>
+    <input type="submit" value="Agregar">
+</form>
+</body>
+</html>
