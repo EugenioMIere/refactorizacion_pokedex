@@ -6,6 +6,7 @@
 
 include_once ("controller/AdminController.php");
 include_once ("controller/PublicController.php");
+include_once ("controller/PokemonController.php");
 
 include_once ("model/PokemonModel.php");
 
@@ -21,6 +22,10 @@ class Configuration
     // CONTROLLERS
     public static function getPublicController(){
         return new PublicController(self::getPokemonModel(), self::getPresenter());
+    }
+
+    public static function getPokemonController(){
+        return new PokemonController(self::getPokemonModel(), self::getPresenter());
     }
 
     public static function getAdminController(){

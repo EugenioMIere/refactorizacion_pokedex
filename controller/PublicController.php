@@ -22,4 +22,9 @@ class PublicController
                        <td> {{nombre}} </td> ....
            {{/pokemones}}
            */
-    }
+
+
+}
+
+
+

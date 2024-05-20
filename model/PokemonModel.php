@@ -44,9 +44,11 @@ class PokemonModel
             $this->database->query($sql);
     }
 
-    /* public function filter($nombreBuscado){
-        // Codigo pata filtrar pokemones
-        $sql = "SELECT * from pokemon WHERE nombre = '$nombreBuscado'";
-        return $this->database->query($sql);
-    */
+     public function filter($Buscado)
+     {
+
+         // Codigo pata filtrar pokemones
+         $sql = "SELECT * from pokemon WHERE nombre = '$Buscado'";
+         return $this->database->query($sql);
+     }
 }

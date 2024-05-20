@@ -24,7 +24,7 @@
         <div class="w3-display-topright">
 
 
-            <form action="validar_session.php" method="post">
+            <form action="" method="post">
                 <label for="user"></label>
                 <input type="text" id="user" name="user" required placeholder="Usuario">
 
@@ -38,7 +38,7 @@
 
     <div class="w3-display-container w3-green" style="height:100px;">
         <div class="w3-display-middle">
-            <form action="buscar_pokemon.php" method="post">
+            <form action="/controller/PokemonController.php?controller=pokemon&action=get" method="post">
                 <label for="search"></label>
                 <input type="search" id="search" name="search" placeholder="Ingrese el nombre, tipo o número de Pokémon" width="100px">
                 <button type="submit">¿Quién es este Pokémon?</button>
