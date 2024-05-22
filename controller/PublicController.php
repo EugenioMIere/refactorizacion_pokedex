@@ -26,7 +26,7 @@ class PublicController
             if ($this->autentificar($user, $password)) {
                 $_SESSION["authenticated"] = true;
                 $_SESSION["user"] = $user;
-                $this->presenter->render("view/home.mustache", ["user" => "$_SESSION["user"]"]);
+                $this->presenter->render("view/homeAdministrador.mustache", ["user" => "$_SESSION["user"]"]);
             } else {
                 // En caso de que la autentificacion de false
                 $this->presenter->render("view/home.mustache", ["user" => "Credenciales incorrectas"]);
