@@ -11,6 +11,7 @@ class PublicController
     {
         $this->presenter = $presenter;
         $this->model = $model;
+        session_start();
     }
 
     public function home(){
@@ -19,14 +20,21 @@ class PublicController
     }
 
     public function login(){
-        if (isset($_POST["user"]) && isset($_POST["password"]){
+        if (isset($_POST["user"]) && isset($_POST["password"])) { 
             $user = $_POST["user"];
             $password = $_POST["password"];
-            if ($this->autentificar($user, $password)){
+            if ($this->autentificar($user, $password)) {
                 $_SESSION["authenticated"] = true;
                 $_SESSION["user"] = $user;
-            } 
-        } 
+                $this->presenter->render("view/home.mustache", ["user" => "$_SESSION["user"]"]);
+            } else {
+                // En caso de que la autentificacion de false
+                $this->presenter->render("view/home.mustache", ["error" => "Credenciales incorrectas"]);
+            }
+        } else {
+            // Manejar el caso donde los datos de usuario o contraseña no están establecidos
+            $this->presenter->render("view/home.mustache");
+        }
     } 
     private function autentificar($user, $password){
         $usuarios = $this->model->verificarUsuario($user, $password);
