@@ -28,8 +28,16 @@ class PublicController
             } 
         } 
     } 
-    private function autentificar(){
-        return $this->model->verificarUsuario($user, $password);
+    private function autentificar($user, $password){
+        $usuarios = $this->model->verificarUsuario($user, $password);
+        if ($usuarios){
+            foreach ($usuarios as $usuario){
+                if ($usuario["usuario"] === $user && $usuario["password"] === $password){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
 
