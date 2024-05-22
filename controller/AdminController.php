@@ -34,6 +34,15 @@ class AdminController
         }
     }
 
+   public function home(){
+       if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true){
+           // redirige a la pagina de sesion si el usuario no está authenticated
+           header("Location: view/home.mustache");
+           exit();
+       } $admin = $_SESSION["user"]; // Aquí puedes cargar cualquier dato que necesites mostrar en la página
+        $this->presenter->render("view/homeAdministrador.mustache", $admin);
+   }
+
     private function nombreCompleto(){
         if (isset($_GET['nombre'])){
             return $_GET['nombre'];
