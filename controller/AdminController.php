@@ -39,8 +39,9 @@ class AdminController
            // redirige a la pagina de sesion si el usuario no está authenticated
            header("Location: view/home.mustache");
            exit();
-       } $admin = $_SESSION["user"]; // Aquí puedes cargar cualquier dato que necesites mostrar en la página
-        $this->presenter->render("view/homeAdministrador.mustache", $admin);
+       } 
+        $pokemones = $this->model->getPokemons();
+        $this->presenter->render("view/homeAdministrador.mustache", ["pokemones" => $pokemones]);
    }
 
     private function nombreCompleto(){
