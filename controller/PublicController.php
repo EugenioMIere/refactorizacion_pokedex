@@ -16,8 +16,7 @@ class PublicController
 
     public function home(){
         $pokemones = $this->model->getPokemons();
-        $userName = isset($_SESSION["user"]) ? $_SESSION["user"] : null;
-        $this->presenter->render("view/home.mustache", ["pokemones" => $pokemones], ["user" => $userName]);
+        $this->presenter->render("view/home.mustache", ["pokemones" => $pokemones]);
     }
 
     public function login(){
