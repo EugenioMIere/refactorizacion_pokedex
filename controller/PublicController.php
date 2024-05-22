@@ -29,7 +29,7 @@ class PublicController
                 $this->presenter->render("view/home.mustache", ["user" => "$_SESSION["user"]"]);
             } else {
                 // En caso de que la autentificacion de false
-                $this->presenter->render("view/home.mustache", ["error" => "Credenciales incorrectas"]);
+                $this->presenter->render("view/home.mustache", ["user" => "Credenciales incorrectas"]);
             }
         } else {
             // Manejar el caso donde los datos de usuario o contraseña no están establecidos
