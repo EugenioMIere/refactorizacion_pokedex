@@ -18,8 +18,19 @@ class PublicController
         $this->presenter->render("view/home.mustache", ["pokemones" => $pokemones]);
     }
 
-
-
+    public function login(){
+        if (isset($_POST["user"]) && isset($_POST["password"]){
+            $user = $_POST["user"];
+            $password = $_POST["password"];
+            if ($this->autentificar($user, $password)){
+                $_SESSION["authenticated"] = true;
+                $_SESSION["user"] = $user;
+            } 
+        } 
+    } 
+    private function autentificar(){
+        return $this->model->verificarUsuario($user, $password);
+    }
 }
 
 
