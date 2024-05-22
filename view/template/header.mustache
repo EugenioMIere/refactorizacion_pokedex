@@ -23,14 +23,20 @@
 
         <div class="w3-display-topright">
             
-            <form action="/controller/PublicController.php?controller=public&action=login" method="post">
-                <label for="user"></label>
-                <input type="text" id="user" name="user" required placeholder="Usuario">
+            {{#user}}
+             <div>Bienvenido, {{user}}</div>
+             {{/user}}
 
-                <label for="password"></label>
-                <input type="password" id="password" name="password" required placeholder="Clave">
-                <button type="submit">Ingresar</button>
+            {{^user}}
+            <form action="" method="post">
+            <label for="user"></label>
+            <input type="text" id="user" name="user" required placeholder="Usuario">
+
+            <label for="password"></label>
+           <input type="password" id="password" name="password" required placeholder="Clave">
+           <button type="submit">Ingresar</button>
             </form>
+            {{/user}}
             
         </div>
 
