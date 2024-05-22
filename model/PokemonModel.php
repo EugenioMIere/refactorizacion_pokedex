@@ -56,4 +56,11 @@ class PokemonModel
          $resultado = $this->database->query($sql);
          return  mysqli_fetch_all($resultado, MYSQLI_ASSOC);
      }
+
+    public function verificarUsuario($user, $password){
+        // verifica usuario administrador
+        $sql = "SELECT * FROM login WHERE usuario = '$user' && password = '$password';
+        $resultado = $this->database->query($sql);
+        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    }
 }
